@@ -52,8 +52,8 @@ namespace ofxIlda {
         // set color and position mapped from custom range (defaults to normalized)
         void set(ofPoint p, ofFloatColor c, ofPoint pmin = ofPoint::zero(), ofPoint pmax = ofPoint::one()) {
             set(
-                ofMap(p.x, pmin.x, pmax.x, kIldaMinPoint, kIldaMaxPoint),
-                ofMap(p.y, pmin.y, pmax.y, kIldaMinPoint, kIldaMaxPoint),
+                ofMap(p.x, pmin.x, pmax.x, kIldaMinPoint, kIldaMaxPoint, true),
+                ofMap(p.y, pmin.y, pmax.y, kIldaMinPoint, kIldaMaxPoint, true),
                 c.r * kIldaMaxIntensity,
                 c.g * kIldaMaxIntensity,
                 c.b * kIldaMaxIntensity,
@@ -65,8 +65,8 @@ namespace ofxIlda {
         // set position mapped from custom range (defaults to normalized)
         void setPosition(ofPoint p, ofPoint pmin = ofPoint::zero(), ofPoint pmax = ofPoint::one()) {
             set(
-                ofMap(p.x, pmin.x, pmax.x, kIldaMinPoint, kIldaMaxPoint),
-                ofMap(p.y, pmin.y, pmax.y, kIldaMinPoint, kIldaMaxPoint)
+                ofMap(p.x, pmin.x, pmax.x, kIldaMinPoint, kIldaMaxPoint, true),
+                ofMap(p.y, pmin.y, pmax.y, kIldaMinPoint, kIldaMaxPoint, true)
                 );
         }
         
