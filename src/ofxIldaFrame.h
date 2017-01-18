@@ -67,8 +67,8 @@ namespace ofxIlda {
             params.draw.pointNumbers = false;
             
             params.output.color.set(1, 1, 1, 1);
-            params.output.blankCount = 30;
-            params.output.endCount = 30;
+			params.output.blankCount = 13;
+            params.output.endCount = 9;
             params.output.doCapX = false;
             params.output.doCapY = false;
             
@@ -314,6 +314,11 @@ namespace ofxIlda {
             
             return p;
         }
+		
+		//--------------------------------------------------------------
+		void setProcessedPolys (vector<Poly> &newPolys){
+			processedPolys = newPolys;
+		}
         
         //--------------------------------------------------------------
         void updateFinalPoints() {
@@ -355,6 +360,8 @@ namespace ofxIlda {
                 }
             }
         }
+		
+	
         
     protected:
         vector<Poly> origPolys;   // stores the original polys
